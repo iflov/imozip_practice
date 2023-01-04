@@ -5,5 +5,4 @@ export class PostCredentialDto extends PickType(Post, [
   'title',
   'description',
   'category',
-  'user',
 ]) {}

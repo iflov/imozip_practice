@@ -12,20 +12,23 @@ import {
 
 import { Category } from './category.entity';
 import { User } from '../../auth/entities/user.entity';
+import { IsString } from 'class-validator';
 
 @Entity({ schema: 'match1', name: 'posts' })
 export class Post extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
+  @IsString()
   @Column()
   title: string;
 
+  @IsString()
   @Column()
   description: string;
 
-  @Column()
-  views: number;
+  // @Column()
+  // views: number;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
