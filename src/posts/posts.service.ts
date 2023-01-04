@@ -12,12 +12,12 @@ export class PostsService {
   ) {}
 
   async setPost(body: PostCredentialDto): Promise<PostResDto> {
-    const { title, description, category } = body;
+    const { title, category, description } = body;
 
     const result = await this.postRepository.save({
       title,
-      description,
       category,
+      description,
     });
 
     return result;

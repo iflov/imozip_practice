@@ -6,4 +6,5 @@ export class PostResDto extends PickType(Post, [
   'user',
   'category',
   'createdAt',
+  // 'views',
 ]) {}
